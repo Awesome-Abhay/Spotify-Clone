@@ -1,0 +1,21 @@
+.red-border{
+    border: 2px solid red;
+}
+.black-border{
+    border: 2px solid black;
+}
+.blue-border{
+    border: 2px solid blue;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.item-center{
+    align-items: center;
+}
+.invert{
+    filter: invert(1);
+}
