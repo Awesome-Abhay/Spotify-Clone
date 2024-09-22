@@ -71,16 +71,40 @@ a{
     position: relative;
     right: 5%;
     width: 110%;
-    height: 200px;
+    height: 250px;
     overflow: auto;
     border-radius: 10px;
     margin-top: 20px;
-    padding: 10px 25px;
+    padding: 10px 10px;
     background-color: #242424;
 }
-.left .library .playbar ul li{
-    list-style-type: decimal;
+.left .library .playbar ul{
+    flex-direction: column;
+    gap: 10px;
 }
+.left .library .playbar ul li{
+    width: 100%;
+    list-style-type: none;
+    padding: 5px 5px;
+    border: 1px solid white;
+    /* height: 50px; */
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 5px 0px; */
+    cursor: pointer;
+}
+.left .library .playbar ul li > div{
+    gap: 8px;
+}
+.left .library .playbar ul li > div .song{
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+}
+
 .left .library .playbar::-webkit-scrollbar{
     width: 10px;
 }
@@ -117,7 +141,7 @@ a{
     font-weight: 400;
     font-size: 17px;
     gap: 4px ;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .left .footer .lang button:hover{
     border: 1px solid white;
@@ -214,15 +238,17 @@ a{
     width: 20%;
     min-width: 200px;
     flex-wrap: wrap;
+    display: flex;
+    align-items: center;
     justify-content: center;
     position: relative;
 }
 .right .bottom .playlists .card:hover{
     background-image: linear-gradient(#121212, #1e1e1e);
+    cursor: pointer;
     .play-button {
         transition: opacity 0.5s, bottom 0.2s ease-out;
         bottom: 72px;
-        /* visibility: visible; */
         opacity: 1;
     }
 }
@@ -238,6 +264,8 @@ a{
     height: 80%;
 }
 .right .bottom .playlists .card .wrapper .pic img{
+    object-fit: cover;
+    object-position: center center;
     border-radius: 100%;
     height: 100%;
     width: 100%;
@@ -262,14 +290,78 @@ a{
     width: 100%;
 }
 .right .bottom .playSystem{
-    height: 50px;
+    height: 60px;
     width: 78%;
     background-color: black;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     position: fixed;
     bottom: 9px;
 }
+.right .bottom .playSystem .upperHandles{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px 50px;
+    align-items: center;
+}
+.right .bottom .playSystem .upperHandles .songDuration{
+    /* justify-self: end; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.right .bottom .playSystem .upperHandles .volume{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+.volume input{
+    cursor: pointer;
+    height: 5px;
+}
+.right .bottom .playSystem .seekbar{
+    border: 2px solid #4d4d4d;
+    width: 90%;
+    height: 2px;
+    position: relative;
+}
+/* this is to handle the cursor on seekbar smoothly */
+.right .bottom .playSystem .seekbar::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    height: 20px;
+    width: 100%;
+    /* background-color: green; */
+}
+.right .bottom .playSystem .seekbar .seekFiller{
+    position: absolute;
+    top: -2px;
+    width: 1%;
+    height: 100%;
+    border: 2px solid white;
+    transition: width 0.5s;
+}
+.right .bottom .playSystem .seekbar .seekButton{
+    width: 13px;
+    height: 13px;
+    position: relative;
+    bottom: 7px;
+    left: 0;
+    background-color: white;
+    border-radius: 50%;
+    transition: left 0.5s;
+    z-index: 1;
+}
+/* .right .bottom .playSystem .seekbar .seekButton{
+    cursor: grabbing;
+    transform: scale(1.2);
+} */
 .right .bottom .playSystem .handles{
     gap: 20px;
     justify-content: center;

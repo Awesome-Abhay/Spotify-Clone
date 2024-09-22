@@ -27,7 +27,17 @@
                     <button><img src="./svgs/plus.svg"></button>
                 </div>
                 <div class="playbar">
-                    <ul>
+                    <ul class="flex">
+                        <!-- <li class="flex">
+                            <div class="flex">
+                                <img src="./svgs/music.svg">
+                                <div class="song flex">
+                                    <p>HOLI KE DIN.mp3</p>
+                                    <p>HOLI KE DIN.mp3</p>
+                                </div>
+                            </div>
+                            <img src="./svgs/playbutton.svg">
+                        </li> -->
                     </ul>
                 </div>
                 <div class="footer">
@@ -63,7 +73,7 @@
                     <a>Show all</a>
                 </div>
                 <div class="playlists flex">
-                    <div class="card flex justify-center item-center">
+                    <!-- <div class="card">
                         <div class="wrapper flex">
                             <div class="pic">
                                 <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca">
@@ -74,70 +84,7 @@
                                 <p>Artist</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="card flex justify-center item-center">
-                        <div class="wrapper flex">
-                            <div class="pic">
-                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca">
-                            </div>
-                            <button class="play-button"></button>
-                            <div class="writings">
-                                <p>Pritam</p>
-                                <p>Artist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex justify-center item-center">
-                        <div class="wrapper flex">
-                            <div class="pic">
-                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca">
-                            </div>
-                            <button class="play-button"></button>
-                            <div class="writings">
-                                <p>Pritam</p>
-                                <p>Artist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex justify-center item-center">
-                        <div class="wrapper flex">
-                            <div class="pic">
-                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca">
-                            </div>
-                            <button class="play-button"></button>
-                            <div class="writings">
-                                <p>Pritam</p>
-                                <p>Artist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex justify-center item-center">
-                        <div class="wrapper flex">
-                            <div class="pic">
-                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca">
-                            </div>
-                            <button class="play-button"></button>
-                            <div class="writings">
-                                <p>Pritam</p>
-                                <p>Artist</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card flex justify-center item-center">
-                        <div class="wrapper flex">
-                            <div class="pic">
-                                <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca">
-                            </div>
-                            <button class="play-button"></button>
-                            <div class="writings">
-                                <p>Pritam</p>
-                                <p>Artist</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
+                    </div> -->      
                 </div>
                 <div class="middle flex">
                     <div class="le flex">
@@ -172,10 +119,24 @@
                     <p>© 2024 Spotify AB</p>
                 </div>
                 <div class="playSystem flex">
-                    <div class="handles flex">
-                        <div><img src="./svgs/leftPlay.svg"></div>
-                        <div style="height: 30px; width: 30px;"><img src="./svgs/circlePlay.svg"></div>
-                        <div><img src="./svgs/rightPlay.svg"></div>
+                    <div class="upperHandles">
+                        <div class="songInfo">Song info</div>
+                        <div class="handles flex">
+                            <div class="leftPlayButton pointer"><img src="./svgs/leftPlay.svg"></div>
+                            <div class="middlePlayButton pointer" style="height: 30px; width: 30px;"><img src="./svgs/circlePlayWhite.svg"></div>
+                            <div class="rightPlayButton pointer"><img src="./svgs/rightPlay.svg"></div>
+                        </div>
+                        <div class="songDuration volume">
+                            <div class="duration">Duration</div>
+                            <div class="volume">
+                                <img src="./svgs/volume.svg">
+                                <input class="range" type="range">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seekbar pointer">
+                        <div class="seekButton"></div>
+                        <div class="seekFiller"></div>
                     </div>
                 </div>
             </div>

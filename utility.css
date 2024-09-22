@@ -19,3 +19,9 @@
 .invert{
     filter: invert(1);
 }
+.shadow{
+    box-shadow: 0px 0px 10px 0px white;
+}
+.pointer{
+    cursor: pointer;
+}
